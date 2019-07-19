@@ -1,0 +1,270 @@
+body {
+  margin: 0;
+  background: #F7F7F7;
+  font-family: 'Roboto', sans-serif;
+  color: #1F252D;
+  font-weight: 400;
+}
+
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: 400;
+}
+
+img {
+  outline: none;
+  max-width: 100%;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+}
+
+input:invalid {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+textarea:invalid {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+iframe {
+  border: none;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+textarea {
+  resize: none;
+  outline: none;
+  border: none;
+}
+
+textarea::focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  outline: none;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1180px;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+.button {
+  background: #079FC2;
+  -webkit-box-shadow: 0px 4px 10px rgba(116, 207, 183, 0.455022);
+  box-shadow: 0px 4px 10px rgba(116, 207, 183, 0.455022);
+  color: #ffffff;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 16px 25px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.button:hover {
+  color: #ffffff;
+  background: #068aa9;
+}
+
+.section-title {
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.scrollup {
+  position: fixed;
+  color: #fff;
+  background-color: #388e3c;
+  left: 20px;
+  bottom: 15px;
+  padding: 6px;
+  font-size: 18px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: none;
+  text-align: center;
+  -webkit-transition: .3s;
+  transition: .3s;
+  z-index: 100;
+}
+
+.scrollup:hover {
+  background-color: #000;
+}
+
+.header-top {
+  background: #F7F7F7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.header-top__logo {
+  width: 187px;
+  background: #7fd4bf;
+  padding: 14px 10px;
+}
+
+.header-top__block-title {
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.header-top__block-descr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-top__block-descr-text {
+  font-size: 14px;
+  font-weight: 300;
+  padding-left: 6px;
+}
+
+.header-top__block-tel {
+  padding-bottom: 10px;
+}
+
+.header-top__block-tel a {
+  color: #1F252D;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.header-top__block-time {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.header-nav {
+  background: #fff;
+}
+
+.header-nav__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 26px 0 22px 0;
+  border-bottom: 4px solid #7fd4bf;
+}
+
+.header-nav__block ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav__block ul li a {
+  text-transform: uppercase;
+  color: #1F252D;
+  font-size: 13px;
+  font-weight: 500;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.header-nav__block ul li a:hover {
+  color: #7fd4bf;
+}
+
+.divider {
+  background: url("../img/header/line.png") no-repeat center;
+  background-size: contain;
+  width: 2px;
+  margin: 0 20px;
+}
+
+.button-search {
+  background: url("../img/header/search-icon.svg") no-repeat center;
+  background-size: contain;
+  display: block;
+  width: 12px;
+  height: 12px;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.button-search:hover {
+  -webkit-filter: brightness(35%);
+  filter: brightness(35%);
+}

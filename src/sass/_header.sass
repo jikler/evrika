@@ -1,0 +1,69 @@
+.header
+ &-top
+  background: #F7F7F7
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &__logo
+   width: 187px
+   background: #7fd4bf
+   padding: 14px 10px
+  &__block
+   &-title
+    padding-bottom: 10px
+    font-size: 20px
+    font-weight: 500
+   &-descr
+    display: flex
+    &-text
+     font-size: 14px
+     font-weight: 300
+     padding-left: 6px
+   &-tel
+    padding-bottom: 10px
+    a
+     color: $color-black
+     font-size: 20px
+     font-weight: 500
+   &-time
+    font-size: 14px
+    font-weight: 300
+ &-nav
+  background: #fff
+  &__block
+   display: flex
+   align-items: center
+   justify-content: space-between
+   padding: 26px 0 22px 0
+   border-bottom: 4px solid #7fd4bf
+   ul
+    display: flex
+    list-style: none
+    justify-content: space-between
+    margin: 0
+    padding: 0
+    li
+     a
+      text-transform: uppercase
+      color: $color-black
+      font-size: 13px
+      font-weight: 500
+      transition: .1s
+      &:hover
+       color: #7fd4bf
+
+.divider
+ background: url('../img/header/line.png') no-repeat center
+ background-size: contain
+ width: 2px
+ margin: 0 20px
+
+.button-search
+ background: url('../img/header/search-icon.svg') no-repeat center
+ background-size: contain
+ display: block
+ width: 12px
+ height: 12px
+ transition: .1s
+ &:hover
+  filter: brightness(35%)
