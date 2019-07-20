@@ -26,15 +26,22 @@
      padding: 0
      li
       a
-       font-size: 10px
+       font-size: 11px
 
  .button-header
   font-size: 12px
+
+ .divider
+  margin: 0 10px
 
 
 @media (max-width: 991px)
  .header
   background: #fff
+  &-top
+   &__logo
+    width: 100px
+    padding: 5px
   &-nav
    display: none
   &-top
@@ -45,6 +52,20 @@
  .toggle-menu,
  .menu-container
   display: block
-// @media (max-width: 767px)
 
-// @media (max-width: 575px)
+ .button-header
+  display: none
+ .button-mobile
+  display: block
+@media (max-width: 767px)
+ .toggle-menu.active
+  right: -100px
+
+@media (max-width: 575px)
+ .header
+   &-top
+    &__block
+     &:nth-child(3)
+      display: none
+ .toggle-menu.active
+  right: 0

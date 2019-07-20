@@ -14,6 +14,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap&subset=cyrillic" rel="stylesheet">
 
 	<!-- style -->
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/tether.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<!-- <link rel="stylesheet" href="css/responsive.css"> -->
 
@@ -47,6 +49,7 @@
 
 				<div class="header-top__button">
 					<button class="button button-header">Бесплатная консультация</button>
+					<button class="button button-mobile"><span class="mdi mdi-phone"></span></button>
 				</div>
 
 				<div class="toggle-menu">
@@ -100,8 +103,38 @@
 	</div>
 	<!-- nav end -->
 
-	<!-- main start -->
-	<!-- main end -->
+	<!-- calc start -->
+	<section class="calc">
+		<div class="container">
+			<div class="calc-block">
+				<h1>Купить квартиру в новостройке</h1>
+				<div class="calc-block__filter">
+					<form id="user_wiget_search_form" class="user_wiget_search_form" method="GET">
+						<div class="calc-block__form-descr">Стоимость, млн руб.</div>
+
+						<div class="form-group">
+        <div id="user_age">
+          <div id="user_age_handler_min" class="ui-slider-handle"></div>
+          <div id="user_age_handler_max" class="ui-slider-handle"></div>
+        </div>
+      <input type="hidden" id="user_age_min" name="user_age_min"/>
+      <input type="hidden" id="user_age_max" name="user_age_max"/>
+      </div>
+
+						<div class="input-row">
+       <input id="checkbox-input-1" type="checkbox" value="myValue 1" checked>
+       <label for="checkbox-input-1" class="input-helper input-helper--checkbox">Москва и Новая Москва</label>
+       <br>
+       <input id="checkbox-input-2" type="checkbox" value="myValue 2">
+       <label for="checkbox-input-2" class="input-helper input-helper--checkbox">Московская область</label>
+    </div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- calc end -->
 
 	<!-- footer start -->
 	<!-- footer end -->
@@ -109,6 +142,8 @@
 
 	  <!-- .script -->
 	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/tether.min.js"></script>
 
 	 <!-- Custom js -->
 	<!-- <script src="js/wow.min.js"></script> -->

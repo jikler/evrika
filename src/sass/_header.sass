@@ -67,6 +67,18 @@
  &:hover
   filter: brightness(35%)
 
+.button-mobile
+ display: none
+ padding: 10px
+ span
+  &::before
+   display: flex
+   justify-content: center
+   align-items: center
+   font-size: 22px
+   line-height: 0
+   height: 20px
+
 // mobile menu start
 .menu-container
  height: 100%
@@ -102,8 +114,8 @@
  transition: all 0.8s ease-in-out
 
 .toggle-menu.active
- right: -110px
- top: -20px
+ right: -120px
+ top: 0px
  z-index: 1000
 
 .toggle-menu .icon-bar:last-child
