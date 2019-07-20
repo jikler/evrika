@@ -18,6 +18,14 @@ img {
   max-width: 100%;
 }
 
+select {
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
 input,
 button {
   outline: none;
@@ -439,20 +447,135 @@ button {
   display: inline-block;
 }
 
-#user_age_handler_min,
-#user_age_handler_max {
+.calc {
+  background: url("../img/calc/bg-calc.jpg") no-repeat center;
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.calc-block h1 {
+  font-size: 40px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.calc-block__filter {
+  background: #fff;
+  border-radius: 4px;
+  padding: 25px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.calc-block__filter-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.calc-block__filter-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.calc-block__form-descr {
+  font-size: 14px;
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+
+.button-filter {
+  text-transform: uppercase;
+  padding: 12px 30px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.calc-filter {
+  background: #F7F7F7;
+  border: none;
+  color: #000;
+  font-size: 16px;
+  padding: 0 10px;
+  width: 14.9em;
+  height: 40px;
+  outline: none;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.calc-label {
+  position: relative;
+}
+
+.calc-label:after {
+  position: absolute;
+  right: 10px;
+  top: 25%;
+  font-family: 'material design icons';
+  content: '\f140';
+  font-size: 18px;
+  color: #404853;
+  pointer-events: none;
+}
+
+#user_filter_handler_min,
+#user_filter_handler_max {
   width: 82px;
   margin-left: -41px;
   height: 32px;
   top: 50%;
   margin-top: -16px;
   text-align: center;
-  line-height: 2em;
+  line-height: 2.5em;
+  font-size: 13px;
   outline: none;
   background: #F7F7F7;
   border: 1px solid #EDEDED;
   border-radius: 16px;
   color: #000;
+}
+
+#user_filter_handler_min:before,
+#user_filter_handler_max:before {
+  position: absolute;
+  left: 2px;
+  top: 0;
+  font-family: 'material design icons';
+  content: '\f141';
+  font-size: 16px;
+  color: #d8d8d8;
+  pointer-events: none;
+}
+
+#user_filter_handler_min:after,
+#user_filter_handler_max:after {
+  position: absolute;
+  right: 2px;
+  top: 0;
+  font-family: 'material design icons';
+  content: '\f142';
+  font-size: 16px;
+  color: #d8d8d8;
+  pointer-events: none;
+}
+
+.input-row {
+  padding-left: 30px;
 }
 
 .ui-slider-range {
@@ -463,15 +586,22 @@ button {
   border: none;
 }
 
-#user_age {
+#user_filter {
   background: #d6d6d6;
   height: 8px;
+}
+
+.form-group {
+  width: 70%;
+  margin: 0 40px;
 }
 
 .input-helper {
   position: relative;
   display: inline-block;
-  margin-bottom: 5px;
+  font-weight: 300;
+  font-size: 14px;
+  padding-bottom: 10px;
 }
 
 .input-helper:before {

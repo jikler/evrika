@@ -112,13 +112,14 @@
 					<form id="user_wiget_search_form" class="user_wiget_search_form" method="GET">
 						<div class="calc-block__form-descr">Стоимость, млн руб.</div>
 
-						<div class="form-group">
-        <div id="user_age">
-          <div id="user_age_handler_min" class="ui-slider-handle"></div>
-          <div id="user_age_handler_max" class="ui-slider-handle"></div>
+							<div class="calc-block__filter-top">
+								<div class="form-group">
+        <div id="user_filter">
+          <div id="user_filter_handler_min" class="ui-slider-handle"></div>
+          <div id="user_filter_handler_max" class="ui-slider-handle"></div>
         </div>
-      <input type="hidden" id="user_age_min" name="user_age_min"/>
-      <input type="hidden" id="user_age_max" name="user_age_max"/>
+	      <!-- <input type="hidden" id="user_filter_min" name="user_filter_min"/>
+	      <input type="hidden" id="user_filter_max" name="user_filter_max"/> -->
       </div>
 
 						<div class="input-row">
@@ -127,7 +128,53 @@
        <br>
        <input id="checkbox-input-2" type="checkbox" value="myValue 2">
        <label for="checkbox-input-2" class="input-helper input-helper--checkbox">Московская область</label>
-    </div>
+		    </div>
+							</div>
+
+							<div class="calc-block__filter-select">
+
+								<div class="calc-label">
+									<select class="calc-filter">
+	    	    <option value="01">Станция метро</option>
+	    	    <option value="02">Александровский сад</option>
+	    	    <option value="03">Алексеевская</option>
+		    	  </select>
+								</div>
+
+								<div class="calc-label">
+									<select class="calc-filter">
+	    	    <option value="01">Тип жилья</option>
+	    	    <option value="02">Александровский сад</option>
+	    	    <option value="03">Алексеевская</option>
+		    	  </select>
+								</div>
+
+								<div class="calc-label">
+									<select class="calc-filter">
+	    	    <option value="01">Площадь</option>
+	    	    <option value="02">Александровский сад</option>
+	    	    <option value="03">Алексеевская</option>
+		    	  </select>
+								</div>
+
+								<div class="calc-label">
+									<select class="calc-filter">
+	    	    <option value="01">Тип отделки</option>
+	    	    <option value="02">Александровский сад</option>
+	    	    <option value="03">Алексеевская</option>
+		    	  </select>
+								</div>
+
+								<div class="calc-label">
+									<select class="calc-filter">
+	    	    <option value="01">Срок сдачи</option>
+	    	    <option value="02">Александровский сад</option>
+	    	    <option value="03">Алексеевская</option>
+		    	  </select>
+								</div>
+
+								<button class="button button-filter">Найти</button>
+							</div>
 
 					</form>
 				</div>
