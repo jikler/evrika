@@ -1,3 +1,12 @@
+@media (max-width: 1300px)
+ .calc
+  &-widget
+   top: 20%
+   &__item
+    width: 40px
+    height: 40px
+    span
+     display: none
 @media (max-width: 1199px)
  .header
   &-top
@@ -34,6 +43,33 @@
  .divider
   margin: 0 10px
 
+ // calc start
+ .button-filter
+  width: 21.1em
+
+ .calc-filter
+  font-size: 12px
+  padding: 0 10px
+  margin: 5px 0
+  width: 23em
+  height: 40px
+  outline: none
+
+ .input-helper
+  font-size: 12px
+ // calc end
+
+ // card start
+ .card
+  &-block
+   &__left
+    padding: 20px
+    &-info
+     padding-top: 20px
+     &-item
+      padding: 12px 10px
+ // card end
+
 
 @media (max-width: 991px)
  .header
@@ -42,12 +78,13 @@
    &__logo
     width: 100px
     padding: 5px
-  &-nav
-   display: none
-  &-top
    &__block
     &:nth-child(2)
      display: none
+   &__button
+    margin-right: 5em
+  &-nav
+   display: none
 
  .toggle-menu,
  .menu-container
@@ -57,9 +94,102 @@
   display: none
  .button-mobile
   display: block
+
+ // calc start
+ .calc
+  &-block
+   &__filter
+    &-top
+     flex-direction: column
+   &__form
+    &-descr
+     padding-bottom: 30px
+  &-widget
+   top: 15%
+
+ .form-group
+  width: 88%
+
+ .input-row
+  padding-top: 20px
+ // calc end
+
+ // card start
+ .card
+  &-block
+   flex-direction: column
+   &__left
+    width: 100%
+   &__right
+    width: 100%
+    height: 30em
+    background-position: bottom
+
+ .order-1
+  order: 2
+ .order-2
+  order: 1
+ // card end
+
+ // office start
+ .office
+  &-block
+   &__content
+    &-item
+     flex-basis: 33%
+ // office end
+
+ // footer start
+ .footer
+  padding-top: 35px
+  padding-bottom: 50px
+  &-block
+   flex-direction: column
+   &__lic
+    padding-bottom: 40px
+    text-align: center
+    line-height: 22px
+   &__link
+    text-align: center
+ // footer end
+
 @media (max-width: 767px)
- .toggle-menu.active
-  right: -100px
+ .header
+  &-top
+   &__button
+    margin-right: 4em
+ // calc start
+ .calc
+  &-block
+   h1
+    font-size: 32px
+   &__filter
+    &-select
+     justify-content: center
+
+ .form-group
+  width: 80%
+
+ .button-filter
+  margin-top: 15px
+ // calc end
+
+ // card start
+ .card
+  &-block
+   &__left
+   &__right
+    height: 20em
+ // card end
+
+ // office start
+ .office
+  &-block
+   padding: 50px
+   &__content
+    &-item
+     flex-basis: 50%
+ // office end
 
 @media (max-width: 575px)
  .header
@@ -67,5 +197,75 @@
     &__block
      &:nth-child(3)
       display: none
- .toggle-menu.active
-  right: 0
+
+ // calc start
+ .calc
+  &-block
+   &__folter
+    padding: 20px
+  &-widget
+   display: none
+  &-filter
+   width: 21em
+ // calc end
+
+ // card start
+ .card
+  &-block
+   &__left
+    h2
+     font-size: 18px
+    &-info
+     &-item
+      flex-basis: 46%
+      justify-content: center
+      margin: 5px
+    &-descr
+     &-text
+      font-size: 12px
+      padding-left: 5px
+      span
+       padding-left: 5px
+    &-district
+     font-size: 12px
+    &-table
+     font-size: 11px
+     td
+      padding: 10px 5px
+   &__right
+    height: 20em
+ // card end
+
+ // office start
+ .office
+  &-block
+   padding: 50px 20px 20px 20px
+   h2
+    font-size: 18px
+   &__content
+    padding-bottom: 20px
+    &-item
+     flex-basis: 100%
+   &__descr
+    font-size: 14px
+    line-height: 22px
+   &__title
+    font-size: 18px
+   &__text
+    font-size: 14px
+    line-height: 22px
+ // office end
+
+ // footer start
+ .footer
+  padding-top: 35px
+  padding-bottom: 50px
+  &-block
+   flex-direction: column
+   &__lic
+    padding-bottom: 40px
+    line-height: 22px
+    font-size: 12px
+   &__link
+    span
+     font-size: 12px

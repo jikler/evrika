@@ -97,10 +97,10 @@
 
 .toggle-menu
  display: none
- top: 0
- right: 0
+ top: 1.7em
+ right: 1em
  height: 20px
- position: relative
+ position: absolute
  cursor: pointer
  transition: all 0.3s ease-in-out
 
@@ -114,9 +114,10 @@
  transition: all 0.8s ease-in-out
 
 .toggle-menu.active
- right: -120px
- top: 0px
+ // right: -75px
+ top: 2em
  z-index: 1000
+ position: fixed
 
 .toggle-menu .icon-bar:last-child
  margin-bottom: 0

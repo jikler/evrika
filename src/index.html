@@ -105,6 +105,19 @@
 
 	<!-- calc start -->
 	<section class="calc">
+		<div class="calc-widget">
+
+			<div class="calc-widget__item">
+				<img src="/img/calc/phone-icon.svg" alt="Phone">
+				<span>Обратный звонок</span>
+			</div>
+
+			<div class="calc-widget__item">
+				<img src="/img/calc/calendar-icon.svg" alt="Calendar">
+				<span>Записаться на показ</span>
+			</div>
+
+		</div>
 		<div class="container">
 			<div class="calc-block">
 				<h1>Купить квартиру в новостройке</h1>
@@ -118,8 +131,6 @@
           <div id="user_filter_handler_min" class="ui-slider-handle"></div>
           <div id="user_filter_handler_max" class="ui-slider-handle"></div>
         </div>
-	      <!-- <input type="hidden" id="user_filter_min" name="user_filter_min"/>
-	      <input type="hidden" id="user_filter_max" name="user_filter_max"/> -->
       </div>
 
 						<div class="input-row">
@@ -135,41 +146,41 @@
 
 								<div class="calc-label">
 									<select class="calc-filter">
-	    	    <option value="01">Станция метро</option>
-	    	    <option value="02">Александровский сад</option>
-	    	    <option value="03">Алексеевская</option>
+										<option value="" disabled selected>Станция метро</option>
+	    	    <option value="01">Александровский сад</option>
+	    	    <option value="02">Алексеевская</option>
 		    	  </select>
 								</div>
 
 								<div class="calc-label">
 									<select class="calc-filter">
-	    	    <option value="01">Тип жилья</option>
-	    	    <option value="02">Александровский сад</option>
-	    	    <option value="03">Алексеевская</option>
+	    	    <option value="" disabled selected>Тип жилья</option>
+	    	    <option value="01">Квартира</option>
+	    	    <option value="02">Дом</option>
 		    	  </select>
 								</div>
 
 								<div class="calc-label">
 									<select class="calc-filter">
-	    	    <option value="01">Площадь</option>
-	    	    <option value="02">Александровский сад</option>
-	    	    <option value="03">Алексеевская</option>
+	    	    <option value="" disabled selected>Площадь</option>
+	    	    <option value="01">64</option>
+	    	    <option value="02">100</option>
 		    	  </select>
 								</div>
 
 								<div class="calc-label">
 									<select class="calc-filter">
-	    	    <option value="01">Тип отделки</option>
-	    	    <option value="02">Александровский сад</option>
-	    	    <option value="03">Алексеевская</option>
+	    	    <option value="" disabled selected>Тип отделки</option>
+	    	    <option value="01">Евроремонт</option>
+	    	    <option value="02">Без ремонта</option>
 		    	  </select>
 								</div>
 
 								<div class="calc-label">
 									<select class="calc-filter">
-	    	    <option value="01">Срок сдачи</option>
-	    	    <option value="02">Александровский сад</option>
-	    	    <option value="03">Алексеевская</option>
+	    	    <option value="" disabled selected>Срок сдачи</option>
+	    	    <option value="01">1 год</option>
+	    	    <option value="02">2 года</option>
 		    	  </select>
 								</div>
 
@@ -183,14 +194,402 @@
 	</section>
 	<!-- calc end -->
 
+	<!-- map start -->
+	<div class="map" id="map">
+
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+		<script>
+			ymaps.ready(function(){
+  if ($('div').is('#map')) {
+    var i;
+    var pl;
+    var coords = [
+					[55.765326, 37.627735],
+					[55.740332, 37.648671],
+					[55.731228, 37.628071],
+					[55.737330, 37.598546],
+					[55.760567, 37.588933],
+					[55.758050, 37.656052]
+				];
+
+    var myMap = new ymaps.Map("map", {
+      center: [55.753215, 37.622504],
+      zoom: 12,
+      controls: ['zoomControl']
+    });
+
+    for (i = 0; i < coords.length; ++i) {
+      pl = new ymaps.Placemark(coords[i]);
+      myMap.geoObjects.add(pl);
+      console.log(coords[i]);
+    }
+
+  };
+});
+		</script>
+	</div>
+	<!-- map end -->
+
+	<!-- card start -->
+	<section class="card">
+		<div class="container">
+
+			<div class="card-block">
+				<div class="card-block__left order-1">
+					<h2>Микрорайон Некрасова</h2>
+					<div class="card-block__left-descr">
+						<img src="img/header/metro-icon.svg" class="img-svg" alt="metro">
+						<div class="card-block__left-descr-text">Марьина роща <span>2 минуты пешком</span></div>
+					</div>
+
+					<div class="card-block__left-district">
+						Москва, ЮВАО, район Некрасовка, Люберецкие поля аэрации
+					</div>
+
+					<table class="card-block__left-table">
+				  <tbody>
+				    <tr>
+				      <td class="td-left">1-комнатные от 30 м²</td>
+				      <td class="td-right">6 900 000 р.</td>
+				    </tr>
+				    <tr>
+				      <td class="td-left">2-комнатные от 75 м²</td>
+				      <td class="td-right">от 22 900 000 р.</td>
+				    </tr>
+				    <tr>
+				      <td class="td-left">3-комнатные от 74 м²</td>
+				      <td class="td-right">от 17 400 000 р.</td>
+				    </tr>
+								<tr>
+				      <td class="td-left">4-комнатные от 177 м²</td>
+				      <td class="td-right">от 63 200 000 р.</td>
+				    </tr>
+								<tr>
+				      <td class="td-left__bottom">Стадия готовности:</td>
+				      <td>Монтаж завершен. Ввод дома в эксплуатацию в 4 квартале 2019 года / На заселении.</td>
+				    </tr>
+								<tr>
+				      <td class="td-left__bottom">Ипотека:</td>
+				      <td>Есть</td>
+				    </tr>
+								<tr>
+				      <td class="td-left__bottom">Отделка:</td>
+				      <td>Возможна</td>
+				    </tr>
+				  </tbody>
+				</table>
+
+				<div class="card-block__left-info">
+
+					<div class="card-block__left-info-item">
+						<img src="img/card/icon-01.png" alt="icon">
+						<span>Ипотека</span>
+					</div>
+
+					<div class="card-block__left-info-item">
+						<img src="img/card/icon-02.png" alt="icon">
+						<span>Рассрочка</span>
+					</div>
+
+					<div class="card-block__left-info-item">
+						<img src="img/card/icon-03.png" alt="icon">
+						<span>Скидки</span>
+					</div>
+
+					<div class="card-block__left-info-item">
+						<img src="img/card/icon-04.png" alt="icon">
+						<span>Субсидии</span>
+					</div>
+
+				</div>
+
+				</div>
+
+				<div class="card-block__right order-2" style="background-image: url(img/card/card-bg.jpg)">
+
+					<div class="card-block__right-action">
+						<div class="card-block__right-action-item">
+							<img src="img/card/icon-05.png" alt="icon">
+							<span>Подарочные сертификаты</span>
+						</div>
+
+						<div class="card-block__right-action-item">
+							<img src="img/card/icon-06.png" alt="icon">
+							<span>Акция</span>
+						</div>
+					</div>
+
+					<div class="card-block__right-button">
+						<a href="#" class="button button-more">Подробнее</a>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="card-block">
+				<div class="card-block__left order-1">
+					<h2>ДОМ «Флагман»</h2>
+					<div class="card-block__left-descr">
+						<img src="img/header/metro-icon.svg" class="img-svg" alt="metro">
+						<div class="card-block__left-descr-text">Выхино <span>10 минут на транспорте</span></div>
+					</div>
+
+					<div class="card-block__left-district">
+						Московская область, г. Долгопрудный, ул. Набережная
+					</div>
+
+					<table class="card-block__left-table">
+				  <tbody>
+				    <tr>
+				      <td class="td-left">1-комнатные от 30 м²</td>
+				      <td class="td-right">от 3 239 397 р.</td>
+				    </tr>
+				    <tr>
+				      <td class="td-left">2-комнатные от 75 м²</td>
+				      <td class="td-right">от 4 734 000 р.</td>
+				    </tr>
+				    <tr>
+				      <td class="td-left">3-комнатные от 74 м²</td>
+				      <td class="td-right">от 6 512 440 р.</td>
+				    </tr>
+								<tr>
+				      <td class="td-left__bottom">Стадия готовности:</td>
+				      <td>Введен в эксплуатацию / На заселении.</td>
+				    </tr>
+								<tr>
+				      <td class="td-left__bottom">Ипотека:</td>
+				      <td>Есть</td>
+				    </tr>
+								<tr>
+				      <td class="td-left__bottom">Отделка:</td>
+				      <td>Возможна</td>
+				    </tr>
+				  </tbody>
+				</table>
+
+				<div class="card-block__left-info">
+
+					<div class="card-block__left-info-item">
+						<img src="img/card/icon-01.png" alt="icon">
+						<span>Ипотека</span>
+					</div>
+
+					<div class="card-block__left-info-item">
+						<img src="img/card/icon-02.png" alt="icon">
+						<span>Рассрочка</span>
+					</div>
+
+					<div class="card-block__left-info-item">
+						<img src="img/card/icon-03.png" alt="icon">
+						<span>Скидки</span>
+					</div>
+
+					<div class="card-block__left-info-item">
+						<img src="img/card/icon-04.png" alt="icon">
+						<span>Субсидии</span>
+					</div>
+
+				</div>
+
+				</div>
+
+				<div class="card-block__right order-2" style="background-image: url(img/card/card-bg2.jpg)">
+
+					<!-- <div class="card-block__right-action">
+						<div class="card-block__right-action-item">
+							<img src="img/card/icon-05.png" alt="icon">
+							<span>Подарочные сертификаты</span>
+						</div>
+
+						<div class="card-block__right-action-item">
+							<img src="img/card/icon-06.png" alt="icon">
+							<span>Акция</span>
+						</div>
+					</div> -->
+
+					<div class="card-block__right-button">
+						<a href="#" class="button button-more">Подробнее</a>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="card-block">
+				<div class="card-block__left order-1">
+					<h2>ЖК «Лайково»</h2>
+					<div class="card-block__left-descr">
+						<img src="img/header/metro-icon.svg" class="img-svg" alt="metro">
+						<div class="card-block__left-descr-text">Ховрино <span>15 минут на транспорте</span></div>
+					</div>
+
+					<div class="card-block__left-district">
+						Московская область, г. Долгопрудный, ул. Дирижабельная
+					</div>
+
+					<table class="card-block__left-table">
+				  <tbody>
+				    <tr>
+				      <td class="td-left">1-комнатные от 30 м²</td>
+				      <td class="td-right">6 900 000 р.</td>
+				    </tr>
+				    <tr>
+				      <td class="td-left">2-комнатные от 75 м²</td>
+				      <td class="td-right">от 22 900 000 р.</td>
+				    </tr>
+				    <tr>
+				      <td class="td-left">3-комнатные от 74 м²</td>
+				      <td class="td-right">от 17 400 000 р.</td>
+				    </tr>
+								<tr>
+				      <td class="td-left">4-комнатные от 177 м²</td>
+				      <td class="td-right">от 63 200 000 р.</td>
+				    </tr>
+								<tr>
+				      <td class="td-left__bottom">Стадия готовности:</td>
+				      <td>Монтаж завершен. Ввод дома в эксплуатацию в 4 квартале 2019 года / На заселении.</td>
+				    </tr>
+								<tr>
+				      <td class="td-left__bottom">Ипотека:</td>
+				      <td>Есть</td>
+				    </tr>
+								<tr>
+				      <td class="td-left__bottom">Отделка:</td>
+				      <td>Возможна</td>
+				    </tr>
+				  </tbody>
+				</table>
+
+				<div class="card-block__left-info">
+
+					<div class="card-block__left-info-item">
+						<img src="img/card/icon-01.png" alt="icon">
+						<span>Ипотека</span>
+					</div>
+
+					<div class="card-block__left-info-item">
+						<img src="img/card/icon-02.png" alt="icon">
+						<span>Рассрочка</span>
+					</div>
+
+					<div class="card-block__left-info-item">
+						<img src="img/card/icon-03.png" alt="icon">
+						<span>Скидки</span>
+					</div>
+
+					<div class="card-block__left-info-item">
+						<img src="img/card/icon-04.png" alt="icon">
+						<span>Субсидии</span>
+					</div>
+
+				</div>
+
+				</div>
+
+				<div class="card-block__right order-2" style="background-image: url(img/card/card-bg3.jpg)">
+
+					<div class="card-block__right-action">
+						<div class="card-block__right-action-item">
+							<img src="img/card/icon-05.png" alt="icon">
+							<span>Подарочные сертификаты</span>
+						</div>
+
+						<!-- <div class="card-block__right-action-item">
+							<img src="img/card/icon-06.png" alt="icon">
+							<span>Акция</span>
+						</div> -->
+					</div>
+
+					<div class="card-block__right-button">
+						<a href="#" class="button button-more">Подробнее</a>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="card-button">
+				<a href="#" class="button button-offer">Все предложения</a>
+			</div>
+
+		</div>
+	</section>
+	<!-- card end -->
+
+	<!-- office start -->
+	<section class="office">
+		<div class="container">
+			<div class="office-block">
+				<h2>Офис Миэль «В Беляево»</h2>
+				<div class="office-block__descr">
+					— это команда профессиональных экспертов и агентов по недвижимости с большим багажом риелторской и юридической практики. Основные направления Миэль «В Беляево» – это продажа элитной недвижимости и квартир в новостройках.
+				</div>
+				<div class="office-block__title">
+					Наши специалисты выполняют широкий спектр операций, связанных с недвижимостью:
+				</div>
+
+				<div class="office-block__content">
+
+					<div class="office-block__content-item">
+						<img src="img/office/icon-office.png" alt="icon">
+						<span>Подбор квартир</span>
+					</div>
+
+					<div class="office-block__content-item">
+						<img src="img/office/icon-office2.png" alt="icon">
+						<span>Проверка застройщика и/или собственника</span>
+					</div>
+
+					<div class="office-block__content-item">
+						<img src="img/office/icon-office3.png" alt="icon">
+						<span>Проверка и оформление документов</span>
+					</div>
+
+					<div class="office-block__content-item">
+						<img src="img/office/icon-office4.png" alt="icon">
+						<span>Юридическая поддержка</span>
+					</div>
+
+					<div class="office-block__content-item">
+						<img src="img/office/icon-office5.png" alt="icon">
+						<span>Сопровождение сделки</span>
+					</div>
+
+				</div>
+
+				<div class="office-block__text">
+					Если вы хотите купить квартиру в элитном жилом комплексе, то мы поможем вам это сделать не только максимально комфортно и безопасно, но и выгодно – мы всегда сообщаем о самых интересных акциях и выбираем действительно горячие предложения. Кроме того, мы готовы помочь оформить выгодную ипотеку. Каждый клиент становится для нас партнером, которого мы готовы защитить от всевозможных рисков и поддержать на всех этапах проведения сделки.
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- office end -->
+
 	<!-- footer start -->
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-block">
+
+				<div class="footer-block__lic">
+					© 2009–<script>var mdate = new Date(); document.write(mdate.getFullYear());</script> Офис «В Беляево». При использовании материалов ссылка на сайт обязательна
+				</div>
+
+				<div class="footer-block__link">
+					<img src="img/footer/icon-lamp.png" alt="icon">
+					<span>Разработка и продвижение — <a href="#">«ЭВРИКА»</a></span>
+				</div>
+
+			</div>
+		</div>
+	</footer>
 	<!-- footer end -->
 
 
 	  <!-- .script -->
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
-	<script src="js/tether.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<!-- <script src="js/tether.min.js"></script> -->
 
 	 <!-- Custom js -->
 	<!-- <script src="js/wow.min.js"></script> -->

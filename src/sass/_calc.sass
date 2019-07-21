@@ -3,6 +3,33 @@
  background-size: cover
  padding-top: 70px
  padding-bottom: 70px
+ position: relative
+ &-widget
+  position: absolute
+  right: 0
+  top: 25%
+  &__item
+   display: flex
+   flex-direction: column
+   align-items: center
+   justify-content: center
+   width: 70px
+   height: 65px
+   background: #7fd3bf
+   border-radius: 4px 0 0 4px
+   margin: 5px 0
+   cursor: pointer
+   transition: .2s
+   &:hover
+    background: #6fbaa8
+   img
+    width: 15px
+    height: auto
+   span
+    font-size: 11px
+    color: #fff
+    text-align: center
+    padding-top: 7px
  &-block
   h1
    font-size: 40px
@@ -23,6 +50,7 @@
     display: flex
     justify-content: space-between
     align-items: center
+    flex-wrap: wrap
   &__form
    &-descr
     font-size: 14px
@@ -39,7 +67,6 @@
  background: #F7F7F7
  border: none
  color: #000
- font-size: 16px
  padding: 0 10px
  width: 14.9em
  height: 40px
@@ -114,7 +141,6 @@
 .input-helper
  position: relative
  display: inline-block
- // margin-bottom: 5px
  font-weight: 300
  font-size: 14px
  padding-bottom: 10px
